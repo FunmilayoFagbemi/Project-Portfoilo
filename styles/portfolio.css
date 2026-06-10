@@ -1,3 +1,7 @@
+/* =========================
+   RESET / BASE
+========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -11,11 +15,14 @@ body {
   font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top, #111 0%, #050505 60%);
   color: var(--text);
-  animation: fadeIn 0.6s ease-out;
   line-height: 1.6;
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* VARIABLES */
+/* =========================
+   VARIABLES
+========================= */
+
 :root {
   --bg: #050505;
   --surface: rgba(255, 255, 255, 0.06);
@@ -27,7 +34,6 @@ body {
 
   --radius: 16px;
 
-  /* SPACING SYSTEM */
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;
@@ -37,11 +43,21 @@ body {
   --space-7: 96px;
 }
 
-/* GLOBAL LAYOUT */
+/* =========================
+   LAYOUT
+========================= */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-3);
+  position: relative;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-3);
 }
 
 .page-content {
@@ -49,11 +65,10 @@ body {
   margin: 0 auto;
 }
 
-.section {
-  padding: var(--space-6) 0;
-}
+/* =========================
+   BACKGROUND EFFECT
+========================= */
 
-/* BACKGROUND GLOW */
 body::before {
   content: "";
   position: fixed;
@@ -67,11 +82,20 @@ body::before {
   z-index: -1;
 }
 
-/* TYPOGRAPHY */
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  letter-spacing: -0.2px;
+}
+
 h1 {
   font-size: 64px;
-  line-height: 1.1;
-  letter-spacing: -2px;
 }
 
 h2 {
@@ -82,48 +106,38 @@ h3 {
   font-size: 28px;
 }
 
-.section-title {
-  font-size: 48px;
-  line-height: 1.1;
-  margin-bottom: var(--space-4);
-  text-align: center;
-}
-
-.section-subtitle {
-  font-size: 18px;
-  color: var(--muted);
-  text-align: center;
-  margin: 0 auto var(--space-6);
-  max-width: 600px;
-}
-
 p {
   font-size: 16px;
-  line-height: 1.6;
   color: var(--muted);
   max-width: 65ch;
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
+
 .hero {
   text-align: center;
   padding: 160px 20px 100px;
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto var(--space-7);
 }
 
 .hero h1 {
   margin-bottom: var(--space-3);
+  letter-spacing: -1px;
 }
 
 .hero h2 {
   margin-bottom: var(--space-3);
   font-weight: 500;
+  opacity: 0.9;
 }
 
 .hero p {
   margin-bottom: var(--space-4);
   font-size: 18px;
+  opacity: 0.8;
 }
 
 .hero-buttons {
@@ -133,7 +147,10 @@ p {
   flex-wrap: wrap;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
+
 .btn-branding {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   border: none;
@@ -164,7 +181,10 @@ p {
   color: var(--accent);
 }
 
-/* NAV */
+/* =========================
+   NAV
+========================= */
+
 nav {
   padding: var(--space-4) 0;
 }
@@ -184,7 +204,6 @@ nav a {
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
-  transition: color 0.25s ease;
 }
 
 nav a::after {
@@ -207,23 +226,24 @@ nav li.active a {
   color: var(--text);
 }
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
+
 .projects {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
 }
 
 .project-card {
-  padding: var(--space-5);
+  padding: var(--space-6);
   border-radius: var(--radius);
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.05);
   transition: transform 0.3s ease, background 0.3s ease;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .project-card:hover {
@@ -232,11 +252,9 @@ nav li.active a {
 }
 
 .project-card img {
+  width: 100%;
   border-radius: var(--radius);
   transition: transform 0.4s ease;
-  width: 100%;
-  display: block;
-  object-fit: cover;
 }
 
 .project-card:hover img {
@@ -256,7 +274,10 @@ nav li.active a {
   margin-bottom: var(--space-3);
 }
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
+
 footer {
   margin-top: var(--space-7);
   padding: var(--space-6) 0;
@@ -276,7 +297,6 @@ footer .email-link {
   text-decoration: none;
   color: var(--text);
   font-size: 18px;
-  transition: 0.3s ease;
 }
 
 footer .email-link:hover {
@@ -297,7 +317,10 @@ footer .social-links a:hover {
   transform: translateY(-3px);
 }
 
-/* ANIMATION */
+/* =========================
+   ANIMATION
+========================= */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -309,56 +332,17 @@ footer .social-links a:hover {
   }
 }
 
-section {
-  padding: var(--space-6) 0;
-}
+/* =========================
+   RESPONSIVE
+========================= */
 
-.container {
-  position: relative;
-}
-
-.project-info p,
-.hero p {
-  max-width: 65ch;
-}
-
-.hero,
-.projects,
-footer {
-  padding-left: var(--space-3);
-  padding-right: var(--space-3);
-}
-
-.hero h1 {
-  letter-spacing: -1px;
-}
-
-.hero h2 {
-  opacity: 0.9;
-}
-
-.hero p {
-  opacity: 0.8;
-}
-
-.hero {
-  margin-bottom: var(--space-7);
-}
-
-.projects {
-  margin-top: var(--space-6);
-}
-
-/* RESPONSIVE */
 @media (max-width: 900px) {
   h1 {
     font-size: 40px;
   }
-
   h2 {
     font-size: 32px;
   }
-
   h3 {
     font-size: 24px;
   }
@@ -370,53 +354,4 @@ footer {
   nav {
     text-align: center;
   }
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.hero,
-.projects {
-  width: 100%;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin-top: 0;
-  letter-spacing: -0.2px;
-}
-
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 var(--space-3);
-  padding-top: var(--space-6);
-  padding-bottom: var(--space-6);
-}
-
-.page-section {
-  padding: var(--space-6) 0;
-}
-
-.page,
-.container {
-  width: 100%;
-}
-
-.page h1,
-.page h2,
-.page p {
-  text-align: center;
-}
-
-a {
-  transition: all 0.25s ease;
-}
-
-main {
-  display: block;
 }
