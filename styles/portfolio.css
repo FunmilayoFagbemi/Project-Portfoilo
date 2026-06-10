@@ -36,13 +36,18 @@ body {
   --space-7: 96px;
 }
 
-/* LAYOUT CONTAINER*/
+/* GLOBAL LAYOUT */
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 var(--space-3);
 }
 
+.section {
+  padding: var(--space-6) 0;
+}
+
+/* BACKGROUND GLOW */
 body::before {
   content: "";
   position: fixed;
@@ -56,6 +61,7 @@ body::before {
   z-index: -1;
 }
 
+/* TYPOGRAPHY */
 h1 {
   font-size: 64px;
   line-height: 1.1;
@@ -77,7 +83,7 @@ p {
   max-width: 65ch;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   text-align: center;
   padding: 160px 20px 100px;
@@ -85,28 +91,25 @@ p {
   margin: 0 auto;
 }
 
-.hero .hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-/* TYPOGRAPHY */
-
 .hero h1 {
-  margin-bottom: 20px;
+  margin-bottom: var(--space-3);
 }
 
 .hero h2 {
-  margin-bottom: 20px;
-  color: var(--text);
+  margin-bottom: var(--space-3);
   font-weight: 500;
 }
 
 .hero p {
-  margin-bottom: 30px;
+  margin-bottom: var(--space-4);
   font-size: 18px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
 }
 
 /* BUTTONS */
@@ -142,7 +145,15 @@ p {
 
 /* NAV */
 nav {
-  padding: 30px 20px;
+  padding: var(--space-4) 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
@@ -151,8 +162,8 @@ nav a {
   font-size: 13px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: color 0.25s ease;
   position: relative;
+  transition: color 0.25s ease;
 }
 
 nav a::after {
@@ -175,17 +186,48 @@ nav li.active a {
   color: var(--text);
 }
 
-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+/* PROJECTS */
+.projects {
   display: flex;
-  gap: 25px;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-5);
 }
+
+.project-card {
+  padding: var(--space-5);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.project-card img {
+  border-radius: var(--radius);
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.02);
+}
+
+.project-info h3 {
+  margin-bottom: var(--space-2);
+  font-size: 26px;
+}
+
+.project-info p {
+  margin-bottom: var(--space-3);
+}
+
 /* FOOTER */
 footer {
-  margin: 100px 0 40px;
+  margin-top: var(--space-7);
+  padding: var(--space-6) 0;
   text-align: center;
 }
 
@@ -193,7 +235,7 @@ footer .contact-box {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 40px 20px;
-  margin-bottom: 40px;
+  margin-bottom: var(--space-5);
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -214,7 +256,6 @@ footer .social-links a {
   background: var(--surface);
   padding: 10px 12px;
   border-radius: 50%;
-  font-size: 16px;
   transition: 0.3s ease;
 }
 
@@ -222,17 +263,23 @@ footer .social-links a:hover {
   color: var(--accent);
   transform: translateY(-3px);
 }
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
   h1 {
     font-size: 40px;
-    line-height: 1.2;
   }
 
   h2 {
@@ -250,49 +297,4 @@ footer .social-links a:hover {
   nav {
     text-align: center;
   }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* PROJECTS */
-
-.project-card {
-  padding: 25px;
-  border-radius: var(--radius);
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease, background 0.3s ease;
-}
-.project-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.project-info h3 {
-  margin-bottom: 12px;
-  font-size: 26px;
-}
-
-.project-info p {
-  margin-bottom: 18px;
-  color: var(--muted);
-  line-height: 1.6;
-}
-
-.project-card img {
-  border-radius: var(--radius);
-  transition: transform 0.4s ease;
-}
-
-.project-card:hover img {
-  transform: scale(1.02);
 }
