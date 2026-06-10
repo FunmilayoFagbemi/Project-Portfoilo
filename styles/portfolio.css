@@ -43,6 +43,11 @@ body {
   padding: 0 var(--space-3);
 }
 
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
 .section {
   padding: var(--space-6) 0;
 }
