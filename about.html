@@ -43,105 +43,102 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- NAVIGATION -->
-      <nav class="d-flex justify-content-between">
-        <ul>
-          <li>
-            <a href="/" title="Homepage">Home</a>
-          </li>
+    <!-- MAIN WRAPPER -->
+    <main class="page">
+      <div class="container">
+        <!-- NAVIGATION -->
+        <nav class="d-flex justify-content-between">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-          <li class="active">
-            <a href="/about.html" title="About Funmilayo">About</a>
-          </li>
+        <!-- ABOUT CONTENT -->
+        <div class="content-container container">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="content">
+                <h1 class="mb-4">Hi, I am Funmilayo Fagbemi</h1>
 
-          <li>
-            <a href="/work.html" title="Work">Work</a>
-          </li>
+                <h2 class="mb-4">Frontend Developer, based in London.</h2>
 
-          <li>
-            <a href="/contact.html" title="Contact Funmilayo">Contact</a>
-          </li>
-        </ul>
-      </nav>
+                <p class="mb-5">
+                  I’m a Junior Frontend Developer building projects using
+                  JavaScript, React, and Python. I enjoy creating clean,
+                  responsive, user-friendly web applications and I’m currently
+                  building my portfolio while gaining real-world experience. I’m
+                  open to junior opportunities, internships, and work experience
+                  in frontend development.
+                </p>
 
-      <!-- ABOUT CONTENT -->
-      <div class="content-container container">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="content">
-              <h1 class="mb-4">Hi, I am Funmilayo Fagbemi</h1>
+                <a href="/work.html" class="btn btn-branding">
+                  View my projects
+                </a>
+              </div>
+            </div>
 
-              <h2 class="mb-4">Frontend Developer, based in London.</h2>
-
-              <p class="mb-5">
-                I’m a Junior Frontend Developer building projects using
-                JavaScript, React, and Python. I enjoy creating clean,
-                responsive, user-friendly web applications and I’m currently
-                building my portfolio while gaining real-world experience. I’m
-                open to junior opportunities, internships, and work experience
-                in frontend development.
-              </p>
-
-              <a href="/work.html" class="btn btn-branding">
-                View my projects
-              </a>
+            <div class="col-lg-6">
+              <img
+                src="images/Funmi.jpeg"
+                alt="Funmilayo Fagbemi"
+                class="img-fluid rounded-circle"
+              />
             </div>
           </div>
-
-          <div class="col-lg-6">
-            <img
-              src="images/Funmi.jpeg"
-              alt="Funmilayo Fagbemi"
-              class="img-fluid rounded-circle"
-            />
-          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <!-- FOOTER -->
-    <footer class="container">
-      <div
-        class="contact-box d-flex justify-content-between mb-5 d-none d-md-flex"
-      >
-        <div>
-          <h3>Work Inquiry</h3>
-          <p class="text-muted">Let’s work together</p>
-        </div>
-
-        <a href="/contact.html" class="btn btn-branding mt-3"> Contact me </a>
-      </div>
-
-      <div class="d-flex justify-content-center mb-5">
-        <a href="mailto:Funmi.Fagbemi@outlook.com" class="email-link">
-          Funmi.Fagbemi@outlook.com
-        </a>
-      </div>
-
-      <div class="social-links d-flex justify-content-center">
-        <a href="https://www.instagram.com/funmi_fagbemi" target="_blank">
-          <i class="fab fa-instagram"></i>
-        </a>
-
-        <a href="https://github.com/FunmilayoFagbemi" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-
-        <a href="https://www.linkedin.com/in/funmilayo-fagbemi" target="_blank">
-          <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-      </div>
-
-      <p class="text-center mt-5">
-        ❤️ This project was coded by Funmilayo Fagbemi and is
-        <a
-          href="https://github.com/FunmilayoFagbemi/Project-Portfoilo"
-          target="_blank"
+    <!-- FOOTER (OUTSIDE MAIN - SAME AS INDEX) -->
+    <footer>
+      <div class="container">
+        <div
+          class="contact-box d-flex justify-content-between mb-5 d-none d-md-flex"
         >
-          open-sourced
-        </a>
-      </p>
+          <div>
+            <h3>Work Inquiry</h3>
+            <p class="text-muted">Let’s work together</p>
+          </div>
+
+          <a href="/contact.html" class="btn btn-branding mt-3"> Contact me </a>
+        </div>
+
+        <div class="d-flex justify-content-center mb-5">
+          <a href="mailto:Funmi.Fagbemi@outlook.com" class="email-link">
+            Funmi.Fagbemi@outlook.com
+          </a>
+        </div>
+
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://www.instagram.com/funmi_fagbemi" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+
+          <a href="https://github.com/FunmilayoFagbemi" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/funmilayo-fagbemi"
+            target="_blank"
+          >
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+        </div>
+
+        <p class="text-center mt-5">
+          ❤️ This project was coded by Funmilayo Fagbemi and is
+          <a
+            href="https://github.com/FunmilayoFagbemi/Project-Portfoilo"
+            target="_blank"
+          >
+            open-sourced
+          </a>
+        </p>
+      </div>
     </footer>
   </body>
 </html>

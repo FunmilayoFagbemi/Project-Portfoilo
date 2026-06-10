@@ -38,64 +38,66 @@
   </head>
 
   <body>
-    <div class="container">
-      <!-- NAVIGATION (EMPTY LOGO SPACE) -->
-      <nav class="d-flex justify-content-between">
-        <div></div>
+    <!-- MAIN PAGE WRAPPER -->
+    <main class="page">
+      <div class="container">
+        <!-- NAVIGATION -->
+        <nav class="d-flex justify-content-between">
+          <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/work.html">Work</a></li>
+            <li class="active"><a href="/contact.html">Contact</a></li>
+          </ul>
+        </nav>
 
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/work.html">Work</a></li>
-          <li class="active"><a href="/contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- CONTENT -->
+        <div class="content-container">
+          <div class="content text-center">
+            <h1 class="mb-5">Let's get in touch!</h1>
 
-      <!-- CONTENT -->
-      <div class="content-container">
-        <div class="content text-center">
-          <h1 class="mb-5">Let's get in touch!</h1>
+            <h3>Email</h3>
+            <p>
+              <a href="mailto:Funmi.Fagbemi@outlook.com">
+                Funmi.Fagbemi@outlook.com
+              </a>
+            </p>
 
-          <h3>Email</h3>
-          <p>
-            <a href="mailto:Funmi.Fagbemi@outlook.com">
-              Funmi.Fagbemi@outlook.com
-            </a>
-          </p>
+            <h3>LinkedIn</h3>
+            <p>
+              <a
+                href="https://www.linkedin.com/in/funmilayo-fagbemi"
+                target="_blank"
+              >
+                linkedin.com/in/funmilayo-fagbemi
+              </a>
+            </p>
 
-          <h3>LinkedIn</h3>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/funmilayo-fagbemi"
-              target="_blank"
-            >
-              linkedin.com/in/funmilayo-fagbemi
-            </a>
-          </p>
+            <h3>Resume</h3>
+            <p>
+              <a href="documents/Funmilayo-Fagbemi-Resume.pdf" target="_blank">
+                Download My Resume
+              </a>
+            </p>
 
-          <!-- ✅ RESUME ADDED HERE -->
-          <h3>Resume</h3>
-          <p>
-            <a href="documents/Funmilayo-Fagbemi-Resume.pdf" target="_blank">
-              Download My Resume
-            </a>
-          </p>
-
-          <h3>Instagram</h3>
-          <p>
-            <a href="https://www.instagram.com/funmi_fagbemi" target="_blank">
-              @funmi_fagbemi
-            </a>
-          </p>
+            <h3>Instagram</h3>
+            <p>
+              <a href="https://www.instagram.com/funmi_fagbemi" target="_blank">
+                @funmi_fagbemi
+              </a>
+            </p>
+          </div>
         </div>
       </div>
+    </main>
 
-      <!-- FOOTER (UNCHANGED) -->
-      <footer class="container mt-5">
+    <!-- FOOTER (OUTSIDE MAIN - CONSISTENT STRUCTURE) -->
+    <footer>
+      <div class="container">
         <div class="text-center mb-4">
           <h3>Work Inquiry</h3>
           <p class="text-muted">Let’s work together</p>
-          <a href="/contact.html" class="btn btn-branding mt-2"> Contact me </a>
+          <a href="/contact.html" class="btn btn-branding mt-2">Contact me</a>
         </div>
 
         <div class="text-center mb-4">
@@ -113,24 +115,18 @@
             <i class="fab fa-github"></i>
           </a>
 
-          <a
-            href="https://www.linkedin.com/in/funmilayo-fagbemi"
-            target="_blank"
-          >
+          <a href="https://linkedin.com/in/funmilayo-fagbemi" target="_blank">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
         </div>
 
         <p class="text-center mt-5">
           ❤️ This project was coded by Funmilayo Fagbemi and is
-          <a
-            href="https://github.com/FunmilayoFagbemi/Project-Portfoilo"
-            target="_blank"
-          >
+          <a href="https://github.com/FunmilayoFagbemi/Project-Portfoilo">
             open-sourced
           </a>
         </p>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
