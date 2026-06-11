@@ -1,25 +1,4 @@
 /* =========================
-   RESET / BASE
-========================= */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #111 0%, #050505 60%);
-  color: var(--text);
-  line-height: 1.6;
-  animation: fadeIn 0.6s ease-out;
-}
-
-/* =========================
    VARIABLES
 ========================= */
 
@@ -44,19 +23,24 @@ body {
 }
 
 /* =========================
-   LAYOUT
+   RESET / BASE
 ========================= */
 
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 var(--space-3);
+* {
+  box-sizing: border-box;
 }
 
-.page {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: var(--space-6) var(--space-3);
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #111 0%, #050505 60%);
+  color: var(--text);
+  line-height: 1.6;
+  animation: fadeIn 0.6s ease-out;
 }
 
 /* =========================
@@ -77,6 +61,23 @@ body::before {
 }
 
 /* =========================
+   LAYOUT
+========================= */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+  position: relative;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-3);
+}
+
+/* =========================
    TYPOGRAPHY
 ========================= */
 
@@ -90,12 +91,11 @@ h3 {
 
 p {
   margin: 0 0 var(--space-3);
-  font-size: 16px;
   color: var(--muted);
+  font-size: 16px;
   max-width: 65ch;
 }
 
-/* headings */
 h1 {
   font-size: 64px;
 }
@@ -109,10 +109,25 @@ h3 {
 }
 
 /* =========================
+   LINKS
+========================= */
+
+a {
+  transition: all 0.25s ease;
+}
+
+/* =========================
    NAVIGATION
 ========================= */
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  background: rgba(5, 5, 5, 0.7);
+
   padding: var(--space-4) 0;
 }
 
@@ -122,6 +137,7 @@ nav {
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -131,7 +147,6 @@ nav a {
   letter-spacing: 2px;
   text-transform: uppercase;
   position: relative;
-  transition: color 0.25s ease;
 }
 
 nav a::after {
@@ -139,7 +154,7 @@ nav a::after {
   position: absolute;
   left: 0;
   bottom: -6px;
-  width: 0%;
+  width: 0;
   height: 1px;
   background: var(--accent);
   transition: width 0.3s ease;
@@ -180,22 +195,34 @@ nav li.active a {
   opacity: 0.8;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-4);
+}
+
 /* =========================
    BUTTONS
 ========================= */
+
+.btn-branding,
+.btn-branding-outline {
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
 
 .btn-branding {
   background: linear-gradient(135deg, var(--accent), var(--accent2));
   border: none;
   color: white;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  transition: 0.25s ease;
 }
 
 .btn-branding:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
 }
 
@@ -203,13 +230,10 @@ nav li.active a {
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  transition: 0.25s ease;
 }
 
 .btn-branding-outline:hover {
+  transform: translateY(-3px);
   border-color: var(--accent);
   color: var(--accent);
 }
@@ -230,22 +254,27 @@ nav li.active a {
   border-radius: var(--radius);
   background: var(--surface);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: transform 0.25s ease, background 0.3s ease;
   overflow: hidden;
+
+  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px);
+
   background: rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 30px rgba(139, 92, 246, 0.15);
 }
 
 .project-card img {
   width: 100%;
-  height: auto;
   display: block;
   border-radius: var(--radius);
+
   transition: transform 0.4s ease;
-  object-fit: cover;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .project-card:hover img {
@@ -290,12 +319,26 @@ footer .social-links a {
   background: var(--surface);
   padding: 10px 12px;
   border-radius: 50%;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 footer .social-links a:hover {
   color: var(--accent);
   transform: translateY(-3px);
+}
+
+footer p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   HELPERS
+========================= */
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* =========================
@@ -307,6 +350,7 @@ footer .social-links a:hover {
     opacity: 0;
     transform: translateY(8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -331,7 +375,11 @@ footer .social-links a:hover {
   }
 
   .hero {
-    padding: 100px 20px 60px;
+    padding: 80px 20px 50px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 
   nav {
@@ -341,20 +389,6 @@ footer .social-links a:hover {
 
   .nav-links {
     justify-content: center;
-    flex-wrap: wrap;
     gap: var(--space-3);
   }
-}
-
-/* =========================
-   HELPERS
-========================= */
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.social-links a {
-  transition: all 0.25s ease;
 }
