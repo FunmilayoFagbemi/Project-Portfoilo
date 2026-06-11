@@ -12,28 +12,14 @@
 
     <title>Front-end Developer - Funmilayo Fagbemi</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      crossorigin="anonymous"
-    />
-
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
 
     <!-- CSS -->
     <link rel="stylesheet" href="styles/portfolio.css" />
-
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- Font Awesome -->
     <script
@@ -43,195 +29,115 @@
   </head>
 
   <body>
-    <!-- PAGE WRAPPER -->
     <main class="page">
       <div class="container">
-        <!-- NAVIGATION -->
-        <nav class="d-flex justify-content-between">
+        <!-- NAV -->
+        <nav>
           <ul class="nav-links">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/work.html">Work</a></li>
-            <li><a href="/contact.html">Contact</a></li>
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
 
         <!-- HERO -->
-        <div class="hero">
+        <section class="hero">
           <h1>Funmilayo Fagbemi</h1>
-
-          <h2 class="mb-4">A Front-end developer based in London</h2>
-
-          <p class="subtitle">
+          <h2>A Front-end developer based in London</h2>
+          <p>
             I’m a Frontend Developer building projects using JavaScript, React,
             and Python. I enjoy creating clean, responsive, user-friendly web
-            applications and I’m currently building my portfolio while gaining
-            real-world experience.
+            applications.
           </p>
 
           <div class="hero-buttons">
-            <a href="/work.html" class="btn btn-branding">View Projects</a>
-            <a href="/contact.html" class="btn btn-branding-outline">
-              Contact Me
-            </a>
+            <a href="work.html" class="btn-branding">View Projects</a>
+            <a href="contact.html" class="btn-branding-outline">Contact Me</a>
           </div>
-        </div>
+        </section>
 
-        <!-- INTRO TEXT -->
-        <p class="text-center m-5">
+        <p style="text-align: center; margin-bottom: 40px">
           Check out some of my featured projects below
         </p>
 
         <!-- PROJECTS -->
-        <div class="projects">
-          <!-- PROJECT 1 -->
-          <div class="project-card mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <img
-                  src="images/My Dream home Design Project.png"
-                  class="img-fluid rounded"
-                  alt="Dream Home Design Preview"
-                />
-              </div>
-
-              <div class="col-md-6">
-                <div class="project-info">
-                  <h3>Dream Home Landing Page</h3>
-                  <p class="text-muted">
-                    This Dream House landing page was designed to showcase a
-                    modern and interactive user experience with dynamic
-                    JavaScript functionality.
-                  </p>
-                  <a href="/work.html" class="btn btn-branding-outline">
-                    Learn more
-                  </a>
-                </div>
-              </div>
+        <section class="projects">
+          <div class="project-card">
+            <img
+              src="images/My Dream home Design Project.png"
+              alt="Dream Home Project"
+            />
+            <div class="project-info">
+              <h3>Dream Home Landing Page</h3>
+              <p>
+                Modern UI landing page built with JavaScript and API
+                integration.
+              </p>
             </div>
           </div>
 
-          <!-- PROJECT 2 -->
-          <div class="project-card mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <img
-                  src="images/React Weather App Project.png"
-                  class="img-fluid"
-                  alt="React Weather Project Preview"
-                />
-              </div>
-
-              <div class="col-md-6">
-                <div class="project-info">
-                  <h3>React Weather App</h3>
-                  <p class="text-muted">
-                    Real-time weather updates and forecasts with dynamic UI.
-                  </p>
-                  <a href="/work.html" class="btn btn-branding-outline">
-                    Learn more
-                  </a>
-                </div>
-              </div>
+          <div class="project-card">
+            <img src="images/React Weather App Project.png" alt="Weather App" />
+            <div class="project-info">
+              <h3>React Weather App</h3>
+              <p>Real-time weather updates built with React.</p>
             </div>
           </div>
 
-          <!-- PROJECT 3 -->
-          <div class="project-card mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <img
-                  src="images/React Dictionary App Project.png"
-                  class="img-fluid"
-                  alt="React Dictionary App Preview"
-                />
-              </div>
-
-              <div class="col-md-6">
-                <div class="project-info">
-                  <h3>React Dictionary App</h3>
-                  <p class="text-muted">
-                    Dictionary app using API integration for definitions and
-                    synonyms.
-                  </p>
-                  <a href="/work.html" class="btn btn-branding-outline">
-                    Learn more
-                  </a>
-                </div>
-              </div>
+          <div class="project-card">
+            <img
+              src="images/React Dictionary App Project.png"
+              alt="Dictionary App"
+            />
+            <div class="project-info">
+              <h3>React Dictionary App</h3>
+              <p>API-powered dictionary with synonyms and definitions.</p>
             </div>
           </div>
 
-          <!-- PROJECT 4 -->
-          <div class="project-card mb-5">
-            <div class="row align-items-center">
-              <div class="col-md-6">
-                <img
-                  src="images/My Travel Guide to Lagos Project.png"
-                  class="img-fluid"
-                  alt="Travel Guide to Lagos Preview"
-                />
-              </div>
-
-              <div class="col-md-6">
-                <div class="project-info">
-                  <h3>My Travel Guide to Lagos</h3>
-                  <p class="text-muted">
-                    Cultural travel guide showcasing Lagos attractions.
-                  </p>
-                  <a href="/work.html" class="btn btn-branding-outline">
-                    Learn more
-                  </a>
-                </div>
-              </div>
+          <div class="project-card">
+            <img
+              src="images/My Travel Guide to Lagos Project.png"
+              alt="Lagos Travel Guide"
+            />
+            <div class="project-info">
+              <h3>Travel Guide to Lagos</h3>
+              <p>Responsive travel guide showcasing Lagos attractions.</p>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </main>
 
-    <!-- FOOTER OUTSIDE MAIN -->
+    <!-- FOOTER -->
     <footer>
       <div class="container">
-        <div
-          class="contact-box d-flex justify-content-between mb-5 d-none d-md-flex"
-        >
-          <div>
-            <h3>Work Inquiry</h3>
-            <p class="text-muted">Let’s work together</p>
-          </div>
-
-          <a href="/contact.html" class="btn btn-branding mt-3"> Contact me </a>
+        <div class="contact-box">
+          <h3>Work Inquiry</h3>
+          <p>Let’s work together</p>
+          <a href="contact.html" class="btn-branding">Contact me</a>
         </div>
 
-        <div class="d-flex justify-content-center mb-5">
-          <a href="mailto:Funmi.Fagbemi@outlook.com" class="email-link">
-            Funmi.Fagbemi@outlook.com
-          </a>
+        <a class="email-link" href="mailto:Funmi.Fagbemi@outlook.com">
+          Funmi.Fagbemi@outlook.com
+        </a>
+
+        <div class="social-links">
+          <a href="https://instagram.com" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://github.com" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://linkedin.com" target="_blank"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
         </div>
 
-        <div class="social-links d-flex justify-content-center">
-          <a href="https://www.instagram.com/funmi_fagbemi" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-
-          <a href="https://github.com/FunmilayoFagbemi" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-
-          <a
-            href="https://www.linkedin.com/in/funmilayo-fagbemi"
-            target="_blank"
-          >
-            <i class="fa-brands fa-linkedin-in"></i>
-          </a>
-        </div>
-
-        <p class="text-center mt-5">
-          ❤️ This project was coded by Funmilayo Fagbemi and is
-          <a href="https://github.com/FunmilayoFagbemi/Project-Portfoilo">
-            open-sourced
-          </a>
+        <p>
+          ❤️ Coded by Funmilayo Fagbemi —
+          <a href="https://github.com/">open source</a>
         </p>
       </div>
     </footer>

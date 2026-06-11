@@ -51,18 +51,12 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 var(--space-3);
-  position: relative;
 }
 
 .page {
   max-width: 1100px;
   margin: 0 auto;
   padding: var(--space-6) var(--space-3);
-}
-
-.page-content {
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 /* =========================
@@ -88,15 +82,22 @@ body::before {
 
 h1,
 h2,
-h3,
-p {
-  margin-top: 0;
+h3 {
+  margin: 0 0 var(--space-3);
   letter-spacing: -0.2px;
+  line-height: 1.2;
 }
 
+p {
+  margin: 0 0 var(--space-3);
+  font-size: 16px;
+  color: var(--muted);
+  max-width: 65ch;
+}
+
+/* headings */
 h1 {
   font-size: 64px;
-  line-height: 1.1;
 }
 
 h2 {
@@ -107,84 +108,8 @@ h3 {
   font-size: 28px;
 }
 
-p {
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 65ch;
-  margin-bottom: var(--space-3);
-}
-
 /* =========================
-   HERO
-========================= */
-
-.hero {
-  text-align: center;
-  padding: 140px 20px 80px;
-  max-width: 900px;
-  margin: 0 auto var(--space-6);
-}
-
-.hero h1 {
-  margin-bottom: var(--space-3);
-  letter-spacing: -1px;
-}
-
-.hero h2 {
-  margin-bottom: var(--space-3);
-  font-weight: 500;
-  opacity: 0.9;
-}
-
-.hero p {
-  margin-bottom: var(--space-4);
-  font-size: 18px;
-  opacity: 0.8;
-}
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-
-.btn-branding {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  border: none;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  transition: 0.25s ease;
-}
-
-.btn-branding:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
-}
-
-.btn-branding-outline {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 12px 24px;
-  border-radius: 999px;
-  font-size: 16px;
-  transition: 0.25s ease;
-}
-
-.btn-branding-outline:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-}
-
-/* =========================
-   NAV
+   NAVIGATION
 ========================= */
 
 nav {
@@ -231,6 +156,65 @@ nav li.active a {
 }
 
 /* =========================
+   HERO
+========================= */
+
+.hero {
+  text-align: center;
+  padding: 140px 20px 80px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  letter-spacing: -1px;
+}
+
+.hero h2 {
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-branding {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.btn-branding:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+.btn-branding-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+
+.btn-branding-outline:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* =========================
    PROJECTS
 ========================= */
 
@@ -269,16 +253,7 @@ nav li.active a {
 }
 
 .project-info {
-  padding: var(--space-3);
-}
-
-.project-info h3 {
-  margin-bottom: var(--space-2);
-  font-size: 26px;
-}
-
-.project-info p {
-  margin-bottom: var(--space-3);
+  padding-top: var(--space-3);
 }
 
 /* =========================
@@ -286,10 +261,9 @@ nav li.active a {
 ========================= */
 
 footer {
-  margin-top: var(--space-6);
-  padding: var(--space-6) 0;
+  margin-top: var(--space-7);
+  padding: var(--space-7) 0 var(--space-6);
   text-align: center;
-  width: 100%;
 }
 
 footer .contact-box {
@@ -347,9 +321,11 @@ footer .social-links a:hover {
   h1 {
     font-size: 40px;
   }
+
   h2 {
     font-size: 32px;
   }
+
   h3 {
     font-size: 24px;
   }
@@ -359,7 +335,8 @@ footer .social-links a:hover {
   }
 
   nav {
-    text-align: center;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-links {
@@ -370,14 +347,14 @@ footer .social-links a:hover {
 }
 
 /* =========================
-   GLOBAL HELPERS
+   HELPERS
 ========================= */
-
-.social-links a {
-  transition: all 0.25s ease;
-}
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.social-links a {
+  transition: all 0.25s ease;
 }
